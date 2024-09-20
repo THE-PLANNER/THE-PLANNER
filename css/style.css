@@ -1,0 +1,369 @@
+/* Main Content Styles */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 130vh; */
+    position: relative;
+    color: #ffffff;
+    padding: 20px;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* =============================================================== */
+/* ====================== Preloader Section ====================== */
+/* =============================================================== */
+
+/* Container => background */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+    background: linear-gradient(123deg, #c6c6c6, #4b554c);
+    background-size: 400% 400%;
+    animation: preloader-background 5s ease infinite;
+}
+
+@keyframes preloader-background {
+    0% {
+        background-position: 0% 75%
+    }
+
+    50% {
+        background-position: 100% 26%
+    }
+
+    100% {
+        background-position: 0% 75%
+    }
+}
+
+.loading-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heart Loader */
+.heart #line {
+    fill: none;
+    stroke: gold;
+    stroke-width: 1.5;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    stroke-miterlimit: 4;
+    stroke-opacity: 1;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: dash 3s linear infinite;
+}
+
+.heart #point {
+    fill: none;
+    stroke: gold;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 0.1;
+    stroke-opacity: 1;
+    stroke-dasharray: 0.0001, 0.9999;
+    stroke-dashoffset: 1;
+    animation: dash 3s linear infinite;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 1;
+    }
+
+    80% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/* Loading words */
+.loading-words {
+    color: #000000;
+    font-weight: bolder;
+    font-size: 50px;
+    height: 60px;
+    padding: 10px 10px;
+    display: flex;
+}
+
+.words-container {
+    overflow: hidden;
+}
+
+.word {
+    display: block;
+    height: 100%;
+    padding-left: 15px;
+    color: #ffd700;
+    animation: cycle-words 5s infinite;
+}
+
+@keyframes cycle-words {
+    10% {
+        transform: translateY(-105%);
+    }
+
+    25% {
+        transform: translateY(-100%);
+    }
+
+    35% {
+        transform: translateY(-205%);
+    }
+
+    50% {
+        transform: translateY(-200%);
+    }
+
+    60% {
+        transform: translateY(-305%);
+    }
+
+    75% {
+        transform: translateY(-300%);
+    }
+
+    85% {
+        transform: translateY(-405%);
+    }
+
+    100% {
+        transform: translateY(-400%);
+    }
+}
+
+
+/* ============================================================== */
+/* ======================== Main Content ======================== */
+/* ============================================================== */
+
+/* Container */
+#main-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    /* Smooth transition */
+}
+
+/* Video Background */
+#background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+}
+
+/* Content */
+.content {
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    max-width: 550px;
+    flex: 1;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.name {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    margin: 5px 0;
+    letter-spacing: 3px;
+}
+
+.bio {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Link Buttons */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link {
+    font-family: 'Fredoka', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 16px 0px;
+    background: linear-gradient(145deg, #939E80, #738175);
+    color: #ffffff;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 1px 5px 0 0 #272727;
+    width: 100%;
+    max-width: 550px;
+    margin: 5px auto;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.1s ease;
+}
+
+.link-icon {
+    margin-right: 10px;
+    font-size: 18px;
+    color: inherit;
+    position: absolute;
+    left: 15px;
+}
+
+.link:hover {
+    transform: translateY(-4px);
+    box-shadow: 1px 9px 0 0 #272727;
+}
+
+.link:active {
+    transform: translateY(4px);
+    box-shadow: 0px 0px 0 0 #272727;
+}
+
+/* Social Media Buttons */
+.contact {
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    margin: 20px 0 5px;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 45px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 35px;
+    box-shadow: 6px 6px 0px 0px #272727;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-phone {
+    background: linear-gradient(145deg, #4CAF50, #388E3C);
+    width: 90px;
+    height: 90px;
+}
+
+.contact-facebook {
+    background: linear-gradient(145deg, #3b5998, #334d84);
+    /* Facebook colors */
+}
+
+.contact-instagram {
+    background: linear-gradient(145deg, #E1306C, #C13584);
+    /* Instagram colors */
+}
+
+.contact-link:hover {
+    transform: scale(1.1);
+}
+
+.contact-link i {
+    margin: 0;
+}
+
+
+/* ================================================================ */
+/* ======================== Footer Section ======================== */
+/* ================================================================ */
+
+footer {
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    margin-top: 80px;
+    max-width: 550px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #738175;
+}
+
+footer a:hover {
+    color: #464d47;
+}
+
+
+/* ================================================================= */
+/* ======================= Responsive Design ======================= */
+/* ================================================================= */
+
+@media (max-width: 768px) {
+    .loading-words {
+        font-size: 25px;
+        height: 35px;
+    }
+
+    .profile-pic {
+        width: 165px;
+        height: 165px;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .bio {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .link,
+    .contact-link {
+        max-width: 95%;
+    }
+
+    .contact {
+        gap: 25px;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Have An Issue? - The Planner</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="The Planner provides high-quality catering services for weddings, corporate events, and special occasions. Elevate your event with our delicious and beautifully presented food.">
+    <meta name="keywords"
+        content="Catering, Event Catering, Wedding Catering, Corporate Catering, Food Service, High-Quality Catering, The Planner, Special Occasions">
+    <meta name="author" content="Zeyad Hamed">
+    <meta name="copyright" content="THE PLANNER" />
+    <meta name="revised" content="Saturday, Sept 9th, 2024, 10:15 bm" />
+    <!-- style file  -->
+    <link rel="stylesheet" href="css/all_pages_style.css">
+    <!-- Adding Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Import Google Font "Fredoka One" -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ============================================================-->
+    <!-- ====================== Navbar Section ======================-->
+    <!-- ============================================================-->
+    <nav>
+        <!-- Logo -->
+        <a href="index.html" class="logo">The Planner<span>.</span></a>
+
+        <!-- Hamburger button -->
+        <label class="menu-toggle" for="check">
+            <input type="checkbox" id="check">
+            <div class="top"></div>
+            <div class="middle"></div>
+            <div class="bottom"></div>
+        </label>
+
+        <!-- Menu -->
+        <ul class="nav-links">
+            <a href="make_order.html"><i class="fas fa-shopping-cart link-icon"></i>Make an order</a>
+            <a href="about_us.html"><i class="fa-solid fa-address-card link-icon"></i>About us</a>
+            <a href="have_issue.html"><i class="fa-solid fa-headset link-icon"></i>Have an issue?</a>
+            <a href="collab.html"><i class="fa-solid fa-hands-helping link-icon"></i>Let's collab!</a>
+        </ul>
+    </nav>
+
+    <!-- =============================================================-->
+    <!-- ==================== Google Form Section ====================-->
+    <!-- =============================================================-->
+    <div class="form-container">
+        <h1>Have An Issue?</h1>
+        <p>We would love to hear from you. Please fill out the form below.</p>
+        <!-- Embed Google Form -->
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSf34F4Fi1oRK-98UGBqBxp2tDrDTZ5Ru0Pb5_qhMgfxx-jChw/viewform?embedded=true"
+            width="640" height="956" frameborder="0" marginheight="0" marginwidth="0">Loading…
+        </iframe>
+    </div>
+
+    <!-- ============================================================-->
+    <!-- ====================== Footer Section ======================-->
+    <!-- ============================================================-->
+    <div id="footer"></div>
+
+
+
+    <script src="js/about_us.js"></script>
+
+    <script>
+        // Load the footer from shared/footer.html
+        fetch('shared/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });    
+    </script>
+</body>
+
+</html>
