@@ -146,6 +146,12 @@ input[type]:checked~div.middle {
     }
 }
 
+iframe {
+    border: none;
+    width: 100%;
+    max-width: 640px;
+    height: 880px;
+}
 
 
 
